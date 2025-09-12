@@ -100,35 +100,36 @@
   <header>
     <h1>Our Beauty Courses</h1>
     <div style="font-size: 1.25em; margin-top: 7px;">Transform Your Career with World-Class Training</div>
+    <div style="font-size: 1.1em; margin-top: 15px; color: #f0e68c; font-weight: 500;">Available Both Online & Offline</div>
   </header>
 
   <section class="courses">
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=500&q=80" alt="Hair Course">
+      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=500&q=80" alt="Hair Styling Course">
       <h2>Hair</h2>
       <div class="price">₹25,000</div>
       <div class="duration">Duration: 1 Month</div>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80" alt="Nail Course">
+      <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=500&q=80" alt="Nail Art Course">
       <h2>Nail</h2>
       <div class="price">₹15,000</div>
       <div class="duration">Duration: 1 Month</div>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=500&q=80" alt="Mehndi Course">
+      <img src="https://images.unsplash.com/photo-1591343395082-e120087004b4?auto=format&fit=crop&w=500&q=80" alt="Mehndi Design Course">
       <h2>Mehndi</h2>
       <div class="price">₹10,000</div>
       <div class="duration">Duration: 1 Month</div>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=500&q=80" alt="Makeup Course">
+      <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=500&q=80" alt="Makeup Artistry Course">
       <h2>Makeup</h2>
       <div class="price">₹25,000</div>
       <div class="duration">Duration: 1 Month</div>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=500&q=80" alt="Skin Course">
+      <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=500&q=80" alt="Skincare Course">
       <h2>Skin</h2>
       <div class="price">₹15,000</div>
       <div class="duration">Duration: 1 Month</div>
