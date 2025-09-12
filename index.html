@@ -4,16 +4,13 @@
   <meta charset="UTF-8">
   <title>Lucky Makeover Patran</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <!-- Resource Hints for faster Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-
   <!-- Google Fonts for luxury feel -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
   <style>
     :root{
       --bg:#18121e;
@@ -51,7 +48,16 @@
       margin: 0;
       padding: 0;
     }
-    .nav-link {
+    .nav-menu li {
+      position: relative;
+      width: 100%;
+    }
+    .nav-menu .nav-link {
+      display: block;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      text-align: center;
       text-decoration: none;
       color: var(--ink);
       font-size: 1.08em;
@@ -61,7 +67,7 @@
       border-radius: 8px;
       transition: background 0.18s, color 0.18s;
     }
-    .nav-link:hover, .nav-link:focus {
+    .nav-menu .nav-link:hover, .nav-menu .nav-link:focus {
       background: var(--gold);
       color: #442d80;
     }
@@ -103,9 +109,18 @@
         padding: 18px 0 12px 0;
         gap: 18px;
         display: none;
+        width: 100%;
       }
       .nav-menu.open {
         display: flex;
+      }
+      .nav-menu li {
+        width: 100%;
+      }
+      .nav-menu .nav-link {
+        width: 100%;
+        text-align: left;
+        padding: 12px 28px;
       }
     }
     header {
@@ -309,6 +324,17 @@
       footer { font-size: clamp(0.9rem, 3.2vw, 1rem); }
       .luxury-packages { grid-template-columns: 1fr; }
     }
+    @media (max-width: 660px) {
+      .nav-menu {
+        width: 100%;
+      }
+      .nav-menu li {
+        width: 100%;
+      }
+      .nav-menu .nav-link {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -320,18 +346,15 @@
       <span class="hamburger"></span>
     </button>
     <ul class="nav-menu">
-  <li><a href="/menu/courses.html" class="nav-link">Courses</a></li>
-  <li><a href="/menu/salonlooks.html" class="nav-link">How our salon Looks</a></li>
-  <li><a href="/menu/contact.html" class="nav-link">Contact Us</a></li>
-</ul>
-
+      <li><a href="/menu/courses.html" class="nav-link">Courses</a></li>
+      <li><a href="/menu/salonlooks.html" class="nav-link">Salon Photos</a></li>
+      <li><a href="/menu/contact.html" class="nav-link">Contact Us</a></li>
+    </ul>
   </nav>
-
   <header>
     <h1>Lucky Makeover Patran</h1>
     <p>Book your appointment now for a luxurious transformation</p>
   </header>
-
   <div class="container">
     <section id="makeup">
       <h2>Luxury Makeup Services</h2>
@@ -483,7 +506,6 @@
       </div>
     </section>
   </div>
-
   <footer aria-label="Made with love in Patiala">
     <p>
       Made with
