@@ -31,6 +31,83 @@
       color: var(--ink);
       line-height: 1.6;
     }
+    /* ---- Hamburger Navbar at very top ---- */
+    .navbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0 18px;
+      background: var(--panel);
+      position: sticky;
+      top: 0;
+      z-index: 1020;
+      min-height: 52px;
+      border-bottom: 2px solid var(--gold-deep);
+    }
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-link {
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 1.08em;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 9px 12px;
+      border-radius: 8px;
+      transition: background 0.18s, color 0.18s;
+    }
+    .nav-link:hover, .nav-link:focus {
+      background: var(--gold);
+      color: #442d80;
+    }
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 3.5px;
+      width: 37px;
+      height: 37px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      left: 13px;
+      top: 10px;
+      z-index: 201;
+    }
+    .hamburger {
+      display: block;
+      width: 28px;
+      height: 3.5px;
+      background: var(--gold);
+      border-radius: 2.5px;
+    }
+    @media (max-width: 660px) {
+      .nav-toggle {
+        display: flex;
+      }
+      .nav-menu {
+        flex-direction: column;
+        background: var(--panel);
+        position: absolute;
+        top: 52px;
+        left: 0;
+        right: 0;
+        border-radius: 0 0 14px 14px;
+        box-shadow: 0 4px 22px #1a124644;
+        padding: 18px 0 12px 0;
+        gap: 18px;
+        display: none;
+      }
+      .nav-menu.open {
+        display: flex;
+      }
+    }
     header {
       background: linear-gradient(115deg, var(--violet) 60%, var(--gold-deep) 120%);
       color: #fff9e0;
@@ -105,11 +182,8 @@
       color: var(--gold);
       font-weight: bold;
     }
-    /* Make the "Includes" column smaller only in the Luxury Packages table (legacy, no-op for cards) */
     #packages table td:nth-child(2) { font-size: 0.9em; line-height: 1.4; }
     #packages table th:nth-child(2) { font-size: 0.95em; }
-
-    /* Luxury package cards (NEW) */
     .luxury-packages {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -175,16 +249,12 @@
       box-shadow: 0 2px 10px #ffd77b54;
       letter-spacing: 1.1px;
     }
-
-    /* Footer – glassy pill with gradient highlight and reduced-motion safe pulse */
     footer {
       display: flex;
       justify-content: center;
       margin: 28px auto 24px;
       padding: 10px 16px;
       width: fit-content;
-/*       background: rgba(255, 255, 255, 0.05); */
-/*       border: 1px solid rgba(211, 168, 78, 0.35); */
       border-radius: 9px;
       backdrop-filter: blur(6px);
       -webkit-backdrop-filter: blur(6px);
@@ -242,6 +312,21 @@
   </style>
 </head>
 <body>
+  <!-- Hamburger Navbar at the very top -->
+  <nav class="navbar" role="navigation" aria-label="Main Navigation">
+    <button class="nav-toggle" aria-label="Open navigation">
+      <span class="hamburger"></span>
+      <span class="hamburger"></span>
+      <span class="hamburger"></span>
+    </button>
+    <ul class="nav-menu">
+
+      <li><a href="#" class="nav-link">courses</a></li>
+      <li><a href="#" class="nav-link">How our salon Looks</a></li>
+      <li><a href="#" class="nav-link">Contact Us</a></li>
+    </ul>
+  </nav>
+
   <header>
     <h1>Lucky Makeover Patran</h1>
     <p>Book your appointment now for a luxurious transformation</p>
@@ -399,7 +484,6 @@
     </section>
   </div>
 
-  <!-- Refined footer -->
   <footer aria-label="Made with love in Patiala">
     <p>
       Made with
@@ -419,5 +503,12 @@
       by <span class="text-gradient">Pirates</span>
     </p>
   </footer>
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
