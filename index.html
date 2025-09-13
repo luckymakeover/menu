@@ -123,6 +123,8 @@
         padding: 12px 28px;
       }
     }
+    
+    /* Header styles */
     header {
       background: linear-gradient(115deg, var(--violet) 60%, var(--gold-deep) 120%);
       color: #fff9e0;
@@ -143,6 +145,34 @@
       letter-spacing: 1px;
       margin-bottom: 0;
     }
+    
+    /* Section separators */
+    .section-separator {
+      margin: 60px 0;
+      position: relative;
+      text-align: center;
+    }
+    .section-separator::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold-deep), var(--gold), var(--gold-deep), transparent);
+      transform: translateY(-50%);
+    }
+    .section-separator::after {
+      content: '✦';
+      display: inline-block;
+      background: var(--bg);
+      color: var(--gold);
+      padding: 0 20px;
+      font-size: 1.5em;
+      position: relative;
+      z-index: 1;
+    }
+    
     .container {
       max-width: 1100px;
       margin: 38px auto;
@@ -196,6 +226,17 @@
     .gold {
       color: var(--gold);
       font-weight: bold;
+    }
+    .price {
+      color: var(--gold);
+      font-weight: bold;
+    }
+    .gold-link {
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .gold-link:hover {
+      text-decoration: underline;
     }
     #packages table td:nth-child(2) { font-size: 0.9em; line-height: 1.4; }
     #packages table th:nth-child(2) { font-size: 0.95em; }
@@ -264,6 +305,72 @@
       box-shadow: 0 2px 10px #ffd77b54;
       letter-spacing: 1.1px;
     }
+    
+    /* Additional styles for courses and other sections */
+    .info-box {
+      background: linear-gradient(135deg, #2c1962, #201431);
+      border: 2px solid var(--gold-deep);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+      font-size: 1.1em;
+    }
+    .mode-badge {
+      background: var(--gold);
+      color: #2c1962;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.9em;
+      margin-right: 10px;
+    }
+    
+    /* Gallery styles */
+    .gallery-container {
+      max-width: 1100px;
+      margin: 38px auto;
+      background: var(--panel);
+      border-radius: 15px;
+      box-shadow: 0 7px 32px #0007;
+      padding: 28px 22px 14px 22px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .gallery-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 2px solid var(--gold-deep);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .gallery-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(255, 215, 123, 0.3);
+    }
+    
+    /* Contact styles */
+    .contact-info {
+      font-size: 1.1em;
+    }
+    .contact-info h3 {
+      margin-top: 0;
+    }
+    .contact-info p {
+      margin: 15px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .icon {
+      font-size: 1.2em;
+      width: 25px;
+    }
+    
     footer {
       display: flex;
       justify-content: center;
@@ -313,16 +420,19 @@
       .heart svg { animation: none; }
     }
     @media (max-width: 800px) {
-      .container { padding: 10px; }
+      .container, .gallery-container { padding: 10px; }
       th, td { padding: 9px 4px; }
       .luxury-packages { gap: 13px; }
       .package-card { padding: 13px 7px 13px 7px; }
+      .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+      .gallery-img { height: 150px; }
     }
     @media (max-width: 500px) {
       header h1 { font-size: 2em; }
       section { padding-left: 6px; }
       footer { font-size: clamp(0.9rem, 3.2vw, 1rem); }
       .luxury-packages { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 660px) {
       .nav-menu {
@@ -335,8 +445,8 @@
         width: 100%;
       }
     }
-     img{
-        height: 200px;
+    img{
+        height: 50px;
     }
   </style>
 </head>
@@ -346,6 +456,7 @@
     <h1>Lucky Makeover Patran</h1>
     <p>Book your appointment now for a luxurious transformation</p>
   </header>
+  
   <div class="container">
     <section id="makeup">
       <h2>Luxury Makeup Services</h2>
@@ -360,6 +471,7 @@
         <tr><td>Reception, Engagement, Party, Bridal Makeup</td><td class="gold">5,000/- to 10,000/-</td></tr>
       </table>
     </section>
+    
     <section id="facials">
       <h2>Premium Facials & Treatments</h2>
       <table>
@@ -373,6 +485,7 @@
         <tr><td>D-TAN</td><td class="gold">1,000/-</td></tr>
       </table>
     </section>
+    
     <section id="body">
       <h2>Body Rituals</h2>
       <table>
@@ -383,6 +496,7 @@
         <tr><td>Body Work</td><td class="gold">3,000/-</td></tr>
       </table>
     </section>
+    
     <section id="mehndi">
       <h2>Designer Mehndi</h2>
       <table>
@@ -394,6 +508,7 @@
         <tr><td>Professional</td><td class="gold">3,500/-</td></tr>
       </table>
     </section>
+    
     <section id="waxing">
       <h2>Waxing & Care</h2>
       <table>
@@ -409,6 +524,7 @@
         <tr><td>Professional, Aroma, Magic</td><td class="gold">2,500/-</td></tr>
       </table>
     </section>
+    
     <section id="nails">
       <h2>Nail Bar</h2>
       <table>
@@ -420,6 +536,7 @@
         <tr><td>Power Polishing</td><td class="gold">800/-</td></tr>
       </table>
     </section>
+    
     <section id="hair">
       <h2>Hair & Spa</h2>
       <table>
@@ -433,6 +550,7 @@
         <tr><td>Silk, Nano Plastia, Botolis, Hydra Spa</td><td class="gold">5,000/- to 8,000/-</td></tr>
       </table>
     </section>
+    
     <section id="packages">
       <h2>Luxury Packages</h2>
       <div class="luxury-packages">
@@ -496,7 +614,12 @@
         </div>
       </div>
     </section>
-    <header>
+  </div>
+
+  <!-- Section Separator -->
+  <div class="section-separator"></div>
+  
+  <header>
     <h1>Our Courses</h1>
     <p>Upgrade your skills with our luxury beauty courses — Now available in both <span class="gold">online</span> and <span class="gold">offline</span> formats.</p>
   </header>
@@ -543,23 +666,31 @@
       </ul>
     </div>
   </div>
+  
+  <!-- Section Separator -->
+  <div class="section-separator"></div>
+  
   <header>
     <h1>Our Gallery</h1>
     <p>Explore transformations, events, and the unique vibe of Lucky Makeover Patran.</p>
   </header>
+  
   <div class="gallery-container">
     <div class="gallery-grid">
       <!-- Add your images here. Example thumbnails below: -->
       <img src="/menu/image1.jpg" alt="Salon work 1" class="gallery-img">
-      <img src="/menu/Image2.jpg" alt="Salon work 1" class="gallery-img">
-      <img src="/menu/Image3.jpg" alt="Salon work 1" class="gallery-img">
-
+      <img src="/menu/Image2.jpg" alt="Salon work 2" class="gallery-img">
+      <img src="/menu/Image3.jpg" alt="Salon work 3" class="gallery-img">
       <!-- ...more images -->
     </div>
   </div>
+  
+  <!-- Section Separator -->
+  <div class="section-separator"></div>
+  
   <header>
     <h1>Contact Us</h1>
-    <p>We’d love to hear from you — Book your appointment, ask questions, or just say hello.</p>
+    <p>We'd love to hear from you — Book your appointment, ask questions, or just say hello.</p>
   </header>
 
   <div class="container">
@@ -569,13 +700,10 @@
       <p><span class="icon">📞</span><b>Call:</b> <a href="tel:+919888299555" class="gold-link">+91 98882 99555</a></p>
       <p><span class="icon">✉️</span><b>Email:</b> <a href="mailto:lucky.makeover.patran@gmail.com" class="gold-link">lucky.makeover.patran@gmail.com</a></p>
       <p><span class="icon">⏰</span><b>Hours:</b> 10:00am – 7:30pm, Monday to Sunday</p>
-      <p><span class="icon">🌐</span><b>Instagram:</b> <a href="https://instagram.com/luckymakeoverpatran" class="gold-link" target="_blank">@luckymakeoverpatran</a></p>
+      <p><span class="icon">🌐</span><b>Instagram:</b> <a href="https://www.instagram.com/lucky_makeover_patran/?hl=en" class="gold-link" target="_blank">@luckymakeoverpatran</a></p>
     </div>
-
   </div>
 
-  </div>
-
-  
-</body>
-</html>
+  <footer>
+    <p>Made with <span class="heart">
+      <svg viewBox="0 0 24
