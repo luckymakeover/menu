@@ -338,19 +338,7 @@
   </style>
 </head>
 <body>
-  <!-- Hamburger Navbar at the very top -->
-  <nav class="navbar" role="navigation" aria-label="Main Navigation">
-    <button class="nav-toggle" aria-label="Open navigation">
-      <span class="hamburger"></span>
-      <span class="hamburger"></span>
-      <span class="hamburger"></span>
-    </button>
-    <ul class="nav-menu">
-      <li><a href="/menu/salonlooks.html" class="nav-link">Salon Photos</a></li>
-      <li><a href="/menu/courses.html" class="nav-link">Courses</a></li>
-      <li><a href="/menu/contact.html" class="nav-link">Contact Us</a></li>
-    </ul>
-  </nav>
+  
   <header>
     <h1>Lucky Makeover Patran</h1>
     <p>Book your appointment now for a luxurious transformation</p>
@@ -505,14 +493,86 @@
         </div>
       </div>
     </section>
+    <header>
+    <h1>Our Courses</h1>
+    <p>Upgrade your skills with our luxury beauty courses — Now available in both <span class="gold">online</span> and <span class="gold">offline</span> formats.</p>
+  </header>
+
+  <div class="container">
+    <div class="info-box">
+      <span class="mode-badge">Online &amp; Offline</span>  
+      <strong>Duration:</strong> Each course takes <span class="gold">1 month</span> to complete.<br>
+      <strong>Bonus:</strong> 1 month paid <span class="gold">internship</span> included!
+    </div>
+    <table>
+      <tr>
+        <th>Course</th>
+        <th>Price (INR)</th>
+      </tr>
+      <tr>
+        <td>Hair</td>
+        <td class="price">25,000</td>
+      </tr>
+      <tr>
+        <td>Nail</td>
+        <td class="price">15,000</td>
+      </tr>
+      <tr>
+        <td>Mehndi</td>
+        <td class="price">10,000</td>
+      </tr>
+      <tr>
+        <td>Makeup</td>
+        <td class="price">25,000</td>
+      </tr>
+      <tr>
+        <td>Skin</td>
+        <td class="price">15,000</td>
+      </tr>
+    </table>
+    <div class="info-box">
+      <strong>What you get:</strong>
+      <ul style="margin: 0 0 0 19px; padding: 0; color: #ffd77b;">
+        <li>Expert training from industry professionals</li>
+        <li>Certification on course completion</li>
+        <li>Both online and offline learning options</li>
+        <li>1 month, hands-on salon internship experience</li>
+      </ul>
+    </div>
+  </div>
+  <header>
+    <h1>Our Gallery</h1>
+    <p>Explore transformations, events, and the unique vibe of Lucky Makeover Patran.</p>
+  </header>
+  <div class="gallery-container">
+    <div class="gallery-grid">
+      <!-- Add your images here. Example thumbnails below: -->
+      <img src="/menu/image1.jpg" alt="Salon work 1" class="gallery-img">
+      <img src="/menu/Image2.jpg" alt="Salon work 1" class="gallery-img">
+      <img src="/menu/Image3.jpg" alt="Salon work 1" class="gallery-img">
+
+      <!-- ...more images -->
+    </div>
+  </div>
+  <header>
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you — Book your appointment, ask questions, or just say hello.</p>
+  </header>
+
+  <div class="container">
+    <div class="contact-info">
+      <h3>Get in Touch</h3>
+      <p><span class="icon">📍</span><b>Address:</b> Near Bus Stand, Patran, Punjab</p>
+      <p><span class="icon">📞</span><b>Call:</b> <a href="tel:+919888299555" class="gold-link">+91 98882 99555</a></p>
+      <p><span class="icon">✉️</span><b>Email:</b> <a href="mailto:lucky.makeover.patran@gmail.com" class="gold-link">lucky.makeover.patran@gmail.com</a></p>
+      <p><span class="icon">⏰</span><b>Hours:</b> 10:00am – 7:30pm, Monday to Sunday</p>
+      <p><span class="icon">🌐</span><b>Instagram:</b> <a href="https://instagram.com/luckymakeoverpatran" class="gold-link" target="_blank">@luckymakeoverpatran</a></p>
+    </div>
+
   </div>
 
-  <script>
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    navToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
-    });
-  </script>
+  </div>
+
+  
 </body>
 </html>
